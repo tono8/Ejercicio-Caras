@@ -123,7 +123,11 @@
     <ClCompile Include="frmPrincipal.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CaraDos.h" />
+    <ClInclude Include="CaraTres.h" />
+    <ClInclude Include="CaraUno.h" />
     <ClInclude Include="Carita.h" />
+    <ClInclude Include="Controladora.h" />
     <ClInclude Include="frmCaritas.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -136,6 +140,12 @@
     <ClInclude Include="Carrera.h" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmCaritas.resx">
+      <DependentUpon>frmCaritas.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCarrera.resx">
+      <DependentUpon>frmCarrera.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.h</DependentUpon>
     </EmbeddedResource>

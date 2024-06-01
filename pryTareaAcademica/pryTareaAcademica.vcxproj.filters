@@ -41,5 +41,17 @@
     <ClInclude Include="frmCaritas.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Controladora.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CaraUno.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CaraDos.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CaraTres.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
