@@ -93,8 +93,12 @@ namespace pryTareaAcademica {
 			this->ClientSize = System::Drawing::Size(684, 441);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
+			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
+			this->MaximizeBox = false;
 			this->Name = L"frmCarrera";
-			this->Text = L"frmCarrera";
+			this->ShowIcon = false;
+			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
+			this->Text = L"UPC-TA1-Caritas - Carrera";
 			this->ResumeLayout(false);
 			this->PerformLayout();
 

@@ -24,7 +24,10 @@ public:
 		return Rectangle(x, y, ancho, alto);
 	}
 	void mostrarSeleccionCentro() {
+		//ALTO=ANCHO=160
 		x = 270;
+		//ALTO=ANCHO=80
+		//x = 320;
 		y = 120;
 	}
 	void mover() {

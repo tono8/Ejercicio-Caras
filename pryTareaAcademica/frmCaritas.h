@@ -114,21 +114,23 @@ namespace pryTareaAcademica {
 			this->Controls->Add(this->btnCara2);
 			this->Controls->Add(this->btnCara1);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
+			this->MaximizeBox = false;
 			this->Name = L"frmCaritas";
-			this->Text = L"frmCaritas";
+			this->ShowIcon = false;
+			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
+			this->Text = L"UPC-TA1-Caritas - Seleccion de caritas";
 			this->ResumeLayout(false);
 
 		}
 #pragma endregion
 	private: System::Void btnCara1_Click(System::Object^ sender, System::EventArgs^ e) {
-		//cara1->mostrar(g);
 		cara1->mostrarSeleccion(CreateGraphics());
 	}
 	private: System::Void btnCara2_Click(System::Object^ sender, System::EventArgs^ e) {
-
+		cara2->mostrarSeleccion(CreateGraphics());
 	}
 	private: System::Void btnCara3_Click(System::Object^ sender, System::EventArgs^ e) {
-
+		cara3->mostrarSeleccion(CreateGraphics());
 	}
 	};
 }
