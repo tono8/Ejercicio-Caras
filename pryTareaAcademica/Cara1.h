@@ -16,8 +16,4 @@ public:
 		mostrarSeleccionCentro();
 		mostrar(g);
 	}
-	void mostrarSeleccion(Graphics^ g) {
-		mostrarSeleccionCentro();
-		mostrar(g);
-	}
 };
