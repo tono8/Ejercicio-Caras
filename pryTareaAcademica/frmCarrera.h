@@ -1,4 +1,5 @@
 #pragma once
+#include "Carrera.h"
 
 namespace pryTareaAcademica {
 
@@ -21,6 +22,8 @@ namespace pryTareaAcademica {
 			//
 			//TODO: Add the constructor code here
 			//
+			carrera = new Carrera();
+			g = this->CreateGraphics();
 		}
 
 	protected:
@@ -34,12 +37,17 @@ namespace pryTareaAcademica {
 				delete components;
 			}
 		}
+	private: System::Windows::Forms::Timer^ timer1;
+	protected:
+	private: System::ComponentModel::IContainer^ components;
 
 	private:
 		/// <summary>
 		/// Required designer variable.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+		Carrera* carrera;
+		Graphics^ g;
+
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -48,7 +56,14 @@ namespace pryTareaAcademica {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			this->components = (gcnew System::ComponentModel::Container());
+			this->timer1 = (gcnew System::Windows::Forms::Timer(this->components));
 			this->SuspendLayout();
+			// 
+			// timer1
+			// 
+			this->timer1->Enabled = true;
+			this->timer1->Tick += gcnew System::EventHandler(this, &frmCarrera::timer1_Tick);
 			// 
 			// frmCarrera
 			// 
@@ -61,5 +76,9 @@ namespace pryTareaAcademica {
 
 		}
 #pragma endregion
+	private: System::Void timer1_Tick(System::Object^ sender, System::EventArgs^ e) {
+		carrera->mover();
+		carrera->mostrar(g);
+	}
 	};
 }

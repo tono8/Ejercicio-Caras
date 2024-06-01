@@ -1,6 +1,7 @@
 #pragma once
 #include "Cara.h"
 class Cara3 : public CaraBase {
+public:
 	Cara3() : CaraBase() {
 		y = 220;
 	}

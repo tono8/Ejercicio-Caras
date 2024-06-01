@@ -1,7 +1,6 @@
 #pragma once
 #include "frmCaritas.h"
 #include "frmCarrera.h"
-#include "Carrera.h"
 
 namespace pryTareaAcademica {
 

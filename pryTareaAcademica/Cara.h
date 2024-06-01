@@ -15,16 +15,18 @@ public:
 		System::Threading::Thread::Sleep(10);
 	};
 	~CaraBase() {};
-	void mostrarBase(Graphics^ g) {
-		g->DrawEllipse(Pens::Blue, x, y, ancho, alto);
-	}
+	// Seria mejor que aqui se dibuje el circulo de la cara y los ojos
+	// en las clases cara1, cara2 y cara3 solo se establece el diseño de la boca
+	//void mostrarBase(Graphics^ g) {
+	//	g->DrawEllipse(Pens::Blue, x, y, ancho, alto);
+	//}
 	void Reset() {
 		x = 20;
 		System::Random r;
 		dx = r.Next(5, 16);
 		System::Threading::Thread::Sleep(10);
 	}
-	Rectangle getArea() {
+	Rectangle getArea() {//Ignora la ambiguedad aqui
 		return Rectangle(x, y, ancho, alto);
 	}
 	void mover() {
