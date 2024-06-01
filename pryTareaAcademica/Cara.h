@@ -20,12 +20,6 @@ public:
 	//void mostrarBase(Graphics^ g) {
 	//	g->DrawEllipse(Pens::Blue, x, y, ancho, alto);
 	//}
-	void Reset() {
-		x = 20;
-		System::Random r;
-		dx = r.Next(5, 16);
-		System::Threading::Thread::Sleep(10);
-	}
 	Rectangle getArea() {//Ignora la ambiguedad aqui
 		return Rectangle(x, y, ancho, alto);
 	}

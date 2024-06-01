@@ -79,6 +79,10 @@ namespace pryTareaAcademica {
 	private: System::Void timer1_Tick(System::Object^ sender, System::EventArgs^ e) {
 		carrera->mover();
 		carrera->mostrar(g);
+		if (carrera->getRound() == 2)
+		{
+			this->timer1->Enabled = false;
+		}
 	}
 	};
 }
