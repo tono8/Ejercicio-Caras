@@ -3,6 +3,23 @@
 #include "Cara2.h"
 #include "Cara3.h"
 #include "Cara.h"
+//Se le pide elaborar un programa en entorno visual donde se muestre TRES caritas : Cara1, Cara2 y Cara3.
+//Las caritas deben aparecer al centro de la PANTALLA.Al pulsar una tecla o hacer click en botón “Cara 1” debe aparecer Cara1, 
+//al presionar otra tecla o botón ”Cara 2” la carita debe cambiar a la Cara2, 
+//y si presiona una tercera tecla o botón “Cara 3”  la carita debe cambiar a Cara3.
+//Es obligatorio que utilice programación orientada a objetos y las caritas deben ser dibujados con las funciones de primitivas gráficas.
+
+//Sobre las caritas :
+//Está conformada por un color que ustedes pueden elegir.Cada carita contiene ojos y diferentes bocas, 
+//como se muestran en las imágenes.Cada ojo tiene una ubicación X, Y en pantalla por lo que también debe ser 
+//considerado al momento de modelar la solución.
+
+//a) Implementación de la clase Cara1, según lo descrito anteriormente.
+//b) Implementación de la clase Cara2, según lo descrito anteriormente.
+//c) Implementación de la clase Cara3, según lo descrito anteriormente.
+//d) Implementación de la clase Carita.Esta clase debe tener una relación de composición con las tres caritas anteriores.
+//e) Los ojos de cada cara deben ser de diferentes colores.
+//f) Las caras deben moverse por todo el escenario y rebotar al llegar al limite del escenario
 
 namespace pryTareaAcademica {
 
@@ -113,6 +130,7 @@ namespace pryTareaAcademica {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->BackColor = System::Drawing::SystemColors::Control;
 			this->ClientSize = System::Drawing::Size(684, 441);
 			this->Controls->Add(this->btnCara3);
 			this->Controls->Add(this->btnCara2);

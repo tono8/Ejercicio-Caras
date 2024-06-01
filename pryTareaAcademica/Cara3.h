@@ -7,9 +7,9 @@ public:
 	}
 	void mostrar(Graphics^ g) {
 		g->DrawEllipse(Pens::DarkOrange, x, y, ancho, alto);
-		//DIBUJO SOLO DE LA BOCA
 	}
 	void mostrarSeleccion(Graphics^ g) {
+		g->Clear(SystemColors::Control);
 		mostrarSeleccionCentro();
 		mostrar(g);
 	}

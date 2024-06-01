@@ -6,6 +6,7 @@ protected:
 	int x, y;
 	int ancho, alto;
 	int dx;
+	int color;
 public:
 	CaraBase() {
 		x = 20;
@@ -15,11 +16,6 @@ public:
 		System::Threading::Thread::Sleep(10);
 	};
 	~CaraBase() {};
-	// Seria mejor que aqui se dibuje el circulo de la cara y los ojos
-	// en las clases cara1, cara2 y cara3 solo se establece el diseño de la boca
-	//void mostrarBase(Graphics^ g) {
-	//	g->DrawEllipse(Pens::Blue, x, y, ancho, alto);
-	//}
 	Rectangle getArea() {//Ignora la ambiguedad aqui
 		return Rectangle(x, y, ancho, alto);
 	}
