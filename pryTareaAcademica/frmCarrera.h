@@ -46,7 +46,9 @@ namespace pryTareaAcademica {
 		/// Required designer variable.
 		/// </summary>
 		Carrera* carrera;
-		Graphics^ g;
+	private: System::Windows::Forms::Label^ label1;
+	private: System::Windows::Forms::Label^ label2;
+		   Graphics^ g;
 
 
 #pragma region Windows Form Designer generated code
@@ -58,6 +60,8 @@ namespace pryTareaAcademica {
 		{
 			this->components = (gcnew System::ComponentModel::Container());
 			this->timer1 = (gcnew System::Windows::Forms::Timer(this->components));
+			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
 			// timer1
@@ -65,14 +69,34 @@ namespace pryTareaAcademica {
 			this->timer1->Enabled = true;
 			this->timer1->Tick += gcnew System::EventHandler(this, &frmCarrera::timer1_Tick);
 			// 
+			// label1
+			// 
+			this->label1->AutoSize = true;
+			this->label1->Location = System::Drawing::Point(13, 13);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(61, 13);
+			this->label1->TabIndex = 0;
+			this->label1->Text = L"Cronometro";
+			// 
+			// label2
+			// 
+			this->label2->AutoSize = true;
+			this->label2->Location = System::Drawing::Point(81, 13);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(0, 13);
+			this->label2->TabIndex = 1;
+			// 
 			// frmCarrera
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(684, 441);
+			this->Controls->Add(this->label2);
+			this->Controls->Add(this->label1);
 			this->Name = L"frmCarrera";
 			this->Text = L"frmCarrera";
 			this->ResumeLayout(false);
+			this->PerformLayout();
 
 		}
 #pragma endregion

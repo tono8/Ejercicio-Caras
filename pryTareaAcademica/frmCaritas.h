@@ -122,6 +122,7 @@ namespace pryTareaAcademica {
 #pragma endregion
 	private: System::Void btnCara1_Click(System::Object^ sender, System::EventArgs^ e) {
 		//cara1->mostrar(g);
+		cara1->mostrarSeleccion(CreateGraphics());
 	}
 	private: System::Void btnCara2_Click(System::Object^ sender, System::EventArgs^ e) {
 

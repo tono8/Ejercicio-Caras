@@ -23,6 +23,10 @@ public:
 	Rectangle getArea() {//Ignora la ambiguedad aqui
 		return Rectangle(x, y, ancho, alto);
 	}
+	void mostrarSeleccionCentro() {
+		x = 270;
+		y = 120;
+	}
 	void mover() {
 		x += dx;
 	}
