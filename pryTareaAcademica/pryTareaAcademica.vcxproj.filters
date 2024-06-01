@@ -18,9 +18,27 @@
     <ClCompile Include="frmPrincipal.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="frmCarrera.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="frmCaritas.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="frmPrincipal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Carrera.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Carita.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="frmCarrera.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="frmCaritas.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

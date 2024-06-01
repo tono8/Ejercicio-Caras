@@ -118,12 +118,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="frmCaritas.cpp" />
+    <ClCompile Include="frmCarrera.cpp" />
     <ClCompile Include="frmPrincipal.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Carita.h" />
+    <ClInclude Include="frmCaritas.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="frmCarrera.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="frmPrincipal.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="Carrera.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
