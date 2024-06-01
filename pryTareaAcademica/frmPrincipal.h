@@ -69,7 +69,7 @@ namespace pryTareaAcademica {
 			this->lblMenuPrincipal->AutoSize = true;
 			this->lblMenuPrincipal->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lblMenuPrincipal->Location = System::Drawing::Point(263, 63);
+			this->lblMenuPrincipal->Location = System::Drawing::Point(270, 63);
 			this->lblMenuPrincipal->Name = L"lblMenuPrincipal";
 			this->lblMenuPrincipal->Size = System::Drawing::Size(160, 22);
 			this->lblMenuPrincipal->TabIndex = 0;
@@ -107,7 +107,7 @@ namespace pryTareaAcademica {
 			this->MaximizeBox = false;
 			this->Name = L"frmPrincipal";
 			this->ShowIcon = false;
-			this->Text = L"frmPrincipal";
+			this->Text = L"UPC-TA1-Caritas";
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
