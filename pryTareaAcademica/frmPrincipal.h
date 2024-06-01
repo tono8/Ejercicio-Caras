@@ -1,4 +1,7 @@
 #pragma once
+#include "frmCaritas.h"
+#include "frmCarrera.h"
+#include "Carrera.h"
 
 namespace pryTareaAcademica {
 
@@ -34,10 +37,15 @@ namespace pryTareaAcademica {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::Label^ label1;
+	private: System::Windows::Forms::Label^ lblMenuPrincipal;
 	protected:
-	private: System::Windows::Forms::Button^ button1;
-	private: System::Windows::Forms::Button^ button2;
+
+	private: System::Windows::Forms::Button^ btnCarrera;
+	private: System::Windows::Forms::Button^ btnCaritas;
+
+	protected:
+
+
 
 	private:
 		/// <summary>
@@ -52,54 +60,67 @@ namespace pryTareaAcademica {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->button1 = (gcnew System::Windows::Forms::Button());
-			this->button2 = (gcnew System::Windows::Forms::Button());
+			this->lblMenuPrincipal = (gcnew System::Windows::Forms::Label());
+			this->btnCarrera = (gcnew System::Windows::Forms::Button());
+			this->btnCaritas = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
-			// label1
+			// lblMenuPrincipal
 			// 
-			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->lblMenuPrincipal->AutoSize = true;
+			this->lblMenuPrincipal->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(263, 63);
-			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(160, 22);
-			this->label1->TabIndex = 0;
-			this->label1->Text = L"MENU PRINCIPAL";
+			this->lblMenuPrincipal->Location = System::Drawing::Point(263, 63);
+			this->lblMenuPrincipal->Name = L"lblMenuPrincipal";
+			this->lblMenuPrincipal->Size = System::Drawing::Size(160, 22);
+			this->lblMenuPrincipal->TabIndex = 0;
+			this->lblMenuPrincipal->Text = L"MENU PRINCIPAL";
 			// 
-			// button1
+			// btnCarrera
 			// 
-			this->button1->Location = System::Drawing::Point(185, 185);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(130, 60);
-			this->button1->TabIndex = 1;
-			this->button1->Text = L"Inicio de carrera";
-			this->button1->UseVisualStyleBackColor = true;
+			this->btnCarrera->Location = System::Drawing::Point(185, 185);
+			this->btnCarrera->Name = L"btnCarrera";
+			this->btnCarrera->Size = System::Drawing::Size(130, 60);
+			this->btnCarrera->TabIndex = 1;
+			this->btnCarrera->Text = L"Inicio de carrera";
+			this->btnCarrera->UseVisualStyleBackColor = true;
+			this->btnCarrera->Click += gcnew System::EventHandler(this, &frmPrincipal::btnCarrera_Click);
 			// 
-			// button2
+			// btnCaritas
 			// 
-			this->button2->Location = System::Drawing::Point(370, 185);
-			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(130, 60);
-			this->button2->TabIndex = 2;
-			this->button2->Text = L"Cambio de caritas";
-			this->button2->UseVisualStyleBackColor = true;
+			this->btnCaritas->Location = System::Drawing::Point(370, 185);
+			this->btnCaritas->Name = L"btnCaritas";
+			this->btnCaritas->Size = System::Drawing::Size(130, 60);
+			this->btnCaritas->TabIndex = 2;
+			this->btnCaritas->Text = L"Cambio de caritas";
+			this->btnCaritas->UseVisualStyleBackColor = true;
+			this->btnCaritas->Click += gcnew System::EventHandler(this, &frmPrincipal::btnCaritas_Click);
 			// 
 			// frmPrincipal
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(684, 441);
-			this->Controls->Add(this->button2);
-			this->Controls->Add(this->button1);
-			this->Controls->Add(this->label1);
+			this->Controls->Add(this->btnCaritas);
+			this->Controls->Add(this->btnCarrera);
+			this->Controls->Add(this->lblMenuPrincipal);
+			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
+			this->MaximizeBox = false;
 			this->Name = L"frmPrincipal";
+			this->ShowIcon = false;
 			this->Text = L"frmPrincipal";
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
 		}
 #pragma endregion
+	private: System::Void btnCarrera_Click(System::Object^ sender, System::EventArgs^ e) {
+		frmCarrera^ frm = gcnew frmCarrera();
+		frm->ShowDialog();
+	}
+	private: System::Void btnCaritas_Click(System::Object^ sender, System::EventArgs^ e) {
+		frmCaritas^ frm = gcnew frmCaritas();
+		frm->ShowDialog();
+	}
 	};
 }

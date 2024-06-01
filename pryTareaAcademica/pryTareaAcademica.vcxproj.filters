@@ -32,7 +32,7 @@
     <ClInclude Include="Carrera.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Carita.h">
+    <ClInclude Include="Cara.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="frmCarrera.h">
@@ -44,13 +44,13 @@
     <ClInclude Include="Controladora.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="CaraUno.h">
+    <ClInclude Include="Cara1.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="CaraDos.h">
+    <ClInclude Include="Cara3.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="CaraTres.h">
+    <ClInclude Include="Cara2.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

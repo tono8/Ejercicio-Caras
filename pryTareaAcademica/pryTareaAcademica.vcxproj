@@ -123,11 +123,13 @@
     <ClCompile Include="frmPrincipal.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CaraDos.h" />
-    <ClInclude Include="CaraTres.h" />
-    <ClInclude Include="CaraUno.h" />
-    <ClInclude Include="Carita.h" />
-    <ClInclude Include="Controladora.h" />
+    <ClInclude Include="Cara3.h" />
+    <ClInclude Include="Cara2.h" />
+    <ClInclude Include="Cara1.h" />
+    <ClInclude Include="Cara.h" />
+    <ClInclude Include="Controladora.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClInclude>
     <ClInclude Include="frmCaritas.h">
       <FileType>CppForm</FileType>
     </ClInclude>
