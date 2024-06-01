@@ -3,7 +3,7 @@
 class Cara3 : public CaraBase {
 public:
 	Cara3() : CaraBase() {
-		y = 220;
+		y = 420;
 	}
 	void mostrar(Graphics^ g) {
 		g->DrawEllipse(Pens::DarkOrange, x, y, ancho, alto);
