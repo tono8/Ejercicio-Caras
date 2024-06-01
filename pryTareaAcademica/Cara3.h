@@ -6,6 +6,7 @@ public:
 		y = 220;
 	}
 	void mostrar(Graphics^ g) {
+		g->DrawEllipse(Pens::Blue, x, y, ancho, alto);
 		//DIBUJO SOLO DE LA BOCA
 	}
 };

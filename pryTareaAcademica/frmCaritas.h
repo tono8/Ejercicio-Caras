@@ -1,4 +1,7 @@
 #pragma once
+#include "Cara1.h"
+#include "Cara2.h"
+#include "Cara3.h"
 
 namespace pryTareaAcademica {
 
@@ -14,6 +17,11 @@ namespace pryTareaAcademica {
 	/// </summary>
 	public ref class frmCaritas : public System::Windows::Forms::Form
 	{
+	private:
+		Graphics^ g;
+		Cara1* cara1;
+		Cara2* cara2;
+		Cara3* cara3;
 	public:
 		frmCaritas(void)
 		{
@@ -21,6 +29,9 @@ namespace pryTareaAcademica {
 			//
 			//TODO: Add the constructor code here
 			//
+			cara1 = new Cara1();
+			cara2 = new Cara2();
+			cara3 = new Cara3();
 		}
 
 	protected:
@@ -32,6 +43,7 @@ namespace pryTareaAcademica {
 			if (components)
 			{
 				delete components;
+				delete g;
 			}
 		}
 	private: System::Windows::Forms::Button^ btnCara1;
@@ -71,6 +83,7 @@ namespace pryTareaAcademica {
 			this->btnCara1->TabIndex = 1;
 			this->btnCara1->Text = L"Cara 1";
 			this->btnCara1->UseVisualStyleBackColor = true;
+			this->btnCara1->Click += gcnew System::EventHandler(this, &frmCaritas::btnCara1_Click);
 			// 
 			// btnCara2
 			// 
@@ -80,6 +93,7 @@ namespace pryTareaAcademica {
 			this->btnCara2->TabIndex = 1;
 			this->btnCara2->Text = L"Cara 2";
 			this->btnCara2->UseVisualStyleBackColor = true;
+			this->btnCara2->Click += gcnew System::EventHandler(this, &frmCaritas::btnCara2_Click);
 			// 
 			// btnCara3
 			// 
@@ -89,6 +103,7 @@ namespace pryTareaAcademica {
 			this->btnCara3->TabIndex = 1;
 			this->btnCara3->Text = L"Cara 3";
 			this->btnCara3->UseVisualStyleBackColor = true;
+			this->btnCara3->Click += gcnew System::EventHandler(this, &frmCaritas::btnCara3_Click);
 			// 
 			// frmCaritas
 			// 
@@ -105,5 +120,14 @@ namespace pryTareaAcademica {
 
 		}
 #pragma endregion
+	private: System::Void btnCara1_Click(System::Object^ sender, System::EventArgs^ e) {
+		//cara1->mostrar(g);
+	}
+	private: System::Void btnCara2_Click(System::Object^ sender, System::EventArgs^ e) {
+
+	}
+	private: System::Void btnCara3_Click(System::Object^ sender, System::EventArgs^ e) {
+
+	}
 	};
 }
