@@ -62,7 +62,7 @@ namespace pryTareaAcademica {
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(269, 63);
+			this->label1->Location = System::Drawing::Point(263, 63);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(160, 22);
 			this->label1->TabIndex = 0;
