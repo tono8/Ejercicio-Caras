@@ -121,8 +121,8 @@ namespace pryTareaAcademica {
 			this->timer1->Enabled = false;
 		}
 	}
-private: System::Void timer2_Tick(System::Object^ sender, System::EventArgs^ e) {
-
-}
+	private: System::Void timer2_Tick(System::Object^ sender, System::EventArgs^ e) {
+		//Falta añadir el cronometro
+	}
 };
 }
