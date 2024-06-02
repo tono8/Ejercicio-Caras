@@ -30,7 +30,7 @@ namespace pryTareaAcademica {
 			g = this->CreateGraphics();
 
 			cronometro = gcnew Timer();
-			cronometro->Interval = 1000;
+			cronometro->Interval = 100;
 			cronometro->Tick += gcnew System::EventHandler(this, &frmCarrera::timer2_Tick); 
 		}
 
@@ -102,7 +102,7 @@ namespace pryTareaAcademica {
 			// timer2
 			// 
 			this->timer2->Enabled = true;
-			this->timer2->Interval = 1000;
+			this->timer2->Interval = 100;
 			this->timer2->Tick += gcnew System::EventHandler(this, &frmCarrera::timer2_Tick);
 			// 
 			// frmCarrera
