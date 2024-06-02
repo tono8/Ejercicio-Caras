@@ -7,12 +7,12 @@ public:
 	}
 	void mostrar(Graphics^ g) {
 		//El contorno y los ojos se repite en todas las caras
-		g->DrawEllipse(Pens::Aquamarine, x, y, ancho, alto);
+		g->DrawEllipse(Pens::Navy, x, y, ancho, alto);
 		//Los ojos tiene que ser los dos de diferentes colores
-		g->FillEllipse(Brushes::Aquamarine, x + 30, y + 40, 40, 40);
-		g->FillEllipse(Brushes::Aquamarine, x + 90, y + 40, 40, 40);
+		g->FillEllipse(Brushes::Orange, x + 30, y + 40, 40, 40);
+		g->FillEllipse(Brushes::Orange, x + 90, y + 40, 40, 40);
 		//La boca tiene que ser diferente
-		Pen^ lp2 = gcnew Pen(Color::Aquamarine, 5);
+		Pen^ lp2 = gcnew Pen(Color::Chocolate, 5);
 		g->DrawLine(lp2, x + 100, y + 120, x + 60, y + 120);
 	}
 	void mostrarSeleccion(Graphics^ g) {
