@@ -7,9 +7,11 @@ public:
 	}
 	void mostrar(Graphics^ g) {
 		g->DrawEllipse(Pens::Aquamarine, x, y, ancho, alto);
-		Pen^ lapicero = gcnew Pen(Color::Aquamarine, 5);
-		lapicero->LineJoin = Drawing2D::LineJoin::Miter;
-		g->DrawLine(lapicero, x + 100, y + 120, x + 60, y + 120);
+		g->FillEllipse(Brushes::Aquamarine, x + 30, y + 40, 40, 40);
+		g->FillEllipse(Brushes::Aquamarine, x + 90, y + 40, 40, 40);
+		Pen^ lp2 = gcnew Pen(Color::Aquamarine, 5);
+		//lp2->LineJoin = Drawing2D::LineJoin::Miter;//al hacerlo comentario no hace errores
+		g->DrawLine(lp2, x + 100, y + 120, x + 60, y + 120);
 	}
 	void mostrarSeleccion(Graphics^ g) {
 		g->Clear(SystemColors::Control);
