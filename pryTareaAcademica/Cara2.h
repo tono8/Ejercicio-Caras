@@ -10,7 +10,7 @@ public:
 		g->FillEllipse(Brushes::DarkGreen, x + 30, y + 40, 40, 40);
 		g->FillEllipse(Brushes::DarkGreen, x + 90, y + 40, 40, 40);
 
-		g->DrawEllipse(Pens::Red, x + 50, y+90, 60, 30);
+		g->DrawEllipse(Pens::DarkGreen, x + 45, y+90, 70, 35);
 	}
 	void mostrarSeleccion(Graphics^ g) {
 		g->Clear(SystemColors::Control);
