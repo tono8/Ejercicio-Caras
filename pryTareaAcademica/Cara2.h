@@ -6,6 +6,7 @@ public:
 		y = 240;
 	}
 	void mostrar(Graphics^ g) {
+		//El contorno y los ojos se repite en todas las caras
 		g->DrawEllipse(Pens::DarkGreen, x, y, ancho, alto);
 		g->FillEllipse(Brushes::DarkGreen, x + 30, y + 40, 40, 40);
 		g->FillEllipse(Brushes::DarkGreen, x + 90, y + 40, 40, 40);

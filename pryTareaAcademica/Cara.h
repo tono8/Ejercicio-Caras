@@ -10,7 +10,7 @@ protected:
 public:
 	CaraBase() {
 		x = 20;
-		alto = ancho = 150;//dependiendo del diseño elegido se cambia este parametro
+		alto = ancho = 160;//dependiendo del diseño elegido se cambia este parametro
 		System::Random v;
 		dx = v.Next(5, 16);
 		System::Threading::Thread::Sleep(10);
