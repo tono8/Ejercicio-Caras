@@ -6,9 +6,12 @@ public:
 		y = 240;
 	}
 	void mostrar(Graphics^ g) {
+		//El contorno y los ojos se repite en todas las caras
 		g->DrawEllipse(Pens::DarkGreen, x, y, ancho, alto);
-		g->FillEllipse(Brushes::DarkGreen, x + 30, y + 40, 40, 40);
-		g->FillEllipse(Brushes::DarkGreen, x + 90, y + 40, 40, 40);
+		//Los ojos tiene que ser los dos de diferentes colores
+		g->FillEllipse(Brushes::BlueViolet, x + 30, y + 40, 40, 40);
+		g->FillEllipse(Brushes::BlueViolet, x + 90, y + 40, 40, 40);
+		//La boca tiene que ser diferente
 	}
 	void mostrarSeleccion(Graphics^ g) {
 		g->Clear(SystemColors::Control);
