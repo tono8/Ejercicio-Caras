@@ -40,6 +40,9 @@ namespace pryTareaAcademica {
 		Cara1* cara1;
 		Cara2* cara2;
 		Cara3* cara3;
+		CaraBase* cara;
+		int x, y;
+
 	public:
 		frmCaritas(void)
 		{
@@ -67,6 +70,7 @@ namespace pryTareaAcademica {
 	private: System::Windows::Forms::Button^ btnCara1;
 	private: System::Windows::Forms::Button^ btnCara2;
 	private: System::Windows::Forms::Button^ btnCara3;
+	private: System::ComponentModel::IContainer^ components;
 	protected:
 
 	protected:
@@ -79,7 +83,7 @@ namespace pryTareaAcademica {
 		/// <summary>
 		/// Required designer variable.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+
 
 #pragma region Windows Form Designer generated code
 		/// <summary>

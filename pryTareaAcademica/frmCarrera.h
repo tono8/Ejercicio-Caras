@@ -15,6 +15,10 @@ namespace pryTareaAcademica {
 	/// </summary>
 	public ref class frmCarrera : public System::Windows::Forms::Form
 	{
+	private:
+		Timer^ cronometro;
+		Label^ lblTiempo;
+		int counter;
 	public:
 		frmCarrera(void)
 		{
@@ -24,6 +28,10 @@ namespace pryTareaAcademica {
 			//
 			carrera = new Carrera();
 			g = this->CreateGraphics();
+
+			cronometro = gcnew Timer();
+			cronometro->Interval = 1000;
+			cronometro->Tick += gcnew System::EventHandler(this, &frmCarrera::timer2_Tick); 
 		}
 
 	protected:
@@ -47,7 +55,8 @@ namespace pryTareaAcademica {
 		/// </summary>
 		Carrera* carrera;
 	private: System::Windows::Forms::Label^ lblCronometroTitulo;
-	private: System::Windows::Forms::Label^ lblTimpo;
+	//private: System::Windows::Forms::Label^ lblTiempo;
+
 	private: System::Windows::Forms::Timer^ timer2;
 
 		   Graphics^ g;
@@ -63,7 +72,7 @@ namespace pryTareaAcademica {
 			this->components = (gcnew System::ComponentModel::Container());
 			this->timer1 = (gcnew System::Windows::Forms::Timer(this->components));
 			this->lblCronometroTitulo = (gcnew System::Windows::Forms::Label());
-			this->lblTimpo = (gcnew System::Windows::Forms::Label());
+			this->lblTiempo = (gcnew System::Windows::Forms::Label());
 			this->timer2 = (gcnew System::Windows::Forms::Timer(this->components));
 			this->SuspendLayout();
 			// 
@@ -81,18 +90,19 @@ namespace pryTareaAcademica {
 			this->lblCronometroTitulo->TabIndex = 0;
 			this->lblCronometroTitulo->Text = L"Timer:";
 			// 
-			// lblTimpo
+			// lblTiempo
 			// 
-			this->lblTimpo->AutoSize = true;
-			this->lblTimpo->Location = System::Drawing::Point(56, 13);
-			this->lblTimpo->Name = L"lblTimpo";
-			this->lblTimpo->Size = System::Drawing::Size(21, 13);
-			this->lblTimpo->TabIndex = 1;
-			this->lblTimpo->Text = L"##";
+			this->lblTiempo->AutoSize = true;
+			this->lblTiempo->Location = System::Drawing::Point(56, 13);
+			this->lblTiempo->Name = L"lblTiempo";
+			this->lblTiempo->Size = System::Drawing::Size(21, 13);
+			this->lblTiempo->TabIndex = 1;
+			this->lblTiempo->Text = L"##";
 			// 
 			// timer2
 			// 
 			this->timer2->Enabled = true;
+			this->timer2->Interval = 1000;
 			this->timer2->Tick += gcnew System::EventHandler(this, &frmCarrera::timer2_Tick);
 			// 
 			// frmCarrera
@@ -100,7 +110,7 @@ namespace pryTareaAcademica {
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(684, 601);
-			this->Controls->Add(this->lblTimpo);
+			this->Controls->Add(this->lblTiempo);
 			this->Controls->Add(this->lblCronometroTitulo);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
 			this->MaximizeBox = false;
@@ -122,7 +132,13 @@ namespace pryTareaAcademica {
 		}
 	}
 	private: System::Void timer2_Tick(System::Object^ sender, System::EventArgs^ e) {
-		//Falta añadir el cronometro
+		counter++;
+		this->lblTiempo->Text = counter + " ";
+		if (carrera->getRound() == 2)
+		{
+			this->timer2->Enabled = false;
+			cronometro->Stop();
+		}
 	}
 };
 }
