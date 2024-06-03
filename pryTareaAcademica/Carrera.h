@@ -26,9 +26,9 @@ public:
 		return round;
 	}
 	void mover() {
-		cara1->mover();
-		cara2->mover();
-		cara3->mover();
+		cara1->mover1();
+		cara2->mover2();
+		cara3->mover3();
 	}
 	void mostrar(Graphics^ g) {
 		g->Clear(Color::White);
