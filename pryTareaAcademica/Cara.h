@@ -14,9 +14,14 @@ public:
 		x = 1;
 		alto = ancho = 160;//dependiendo del diseño elegido se cambia este parametro
 		srand(time(NULL));
-		dx1 = 2.3454 + rand() % (16 + 1 - 2);
-		dx2 = 2.2345 + rand() % (16 + 1 - 2);
-		dx3 = 2.4134 + rand() % (16 + 1 - 2);
+		dx1 = 3.3454 + rand() % (16 + 1 - 3);
+		dx2 = 5.2345 + rand() % (16 + 1 - 4);
+		dx3 = 6.4134 + rand() % (16 + 1 - 5);
+
+		if (dx1 == dx2) { dx1 = dx1 - 1; dx2 = dx2 + 1; }
+		if (dx2 == dx3) { dx2 = dx2 - 1; dx3 = dx3 + 1; }
+		if (dx3 == dx1) { dx3 = dx3 - 1; dx1 = dx1 + 1; }
+
 		System::Threading::Thread::Sleep(16);
 	};
 	~CaraBase() {};
