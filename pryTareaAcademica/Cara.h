@@ -23,6 +23,7 @@ public:
 		if (dx3 == dx1) { dx3 = dx3 - 1; dx1 = dx1 + 1; }
 
 		System::Threading::Thread::Sleep(16);
+		//La carrera no va a terminar si dos o tres tienen la misma velocidad ## - Esto no esta en la rubrica de la tarea - ##
 	};
 	~CaraBase() {};
 	Rectangle getArea() {//Ignora la ambiguedad aqui
