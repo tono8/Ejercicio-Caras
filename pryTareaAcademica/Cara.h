@@ -18,6 +18,7 @@ public:
 		dx2 = 2.2345 + rand() % (16 + 1 - 2);
 		dx3 = 2.4134 + rand() % (16 + 1 - 2);
 		System::Threading::Thread::Sleep(16);
+		//La carrera no va a terminar si dos o tres tienen la misma velocidad ## - Esto no esta en la rubrica de la tarea - ##
 	};
 	~CaraBase() {};
 	Rectangle getArea() {//Ignora la ambiguedad aqui
